@@ -1,0 +1,92 @@
+################################################################
+# SELF-HEALING TEST — DEMO LOG
+# Date: 2026-05-22
+# Test script:  self_healing_test.py
+# Fixture:      expected_shape.json
+# Target API:   Flask app at http://localhost:5001/predict
+#
+# Walk-through:
+#   1. Original API     — tests pass
+#   2. priority -> level     (known alias) — DRIFT WARNING, still pass
+#   3. priority -> rank2     (no alias)    — SCHEMA BREAK, exit non-zero
+#   4. priority restored — tests pass cleanly
+################################################################
+
+============================================================
+DEMO STAGE 1 — Original API: priority field present
+Response key in app.py: "priority"
+Expected: PASS, exit 0
+============================================================
+2026-05-22 13:46:38,316 [INFO] Health OK
+2026-05-22 13:46:38,316 [INFO] Warm-up POST /predict to discover response shape
+2026-05-22 13:46:38,318 [INFO] Live response keys: ['confidence', 'priority']
+2026-05-22 13:46:38,318 [INFO] Resolved field mapping: {'priority': 'priority', 'confidence': 'confidence'}
+2026-05-22 13:46:38,319 [INFO] [PASS] task='Fix login bug breaking production' -> priority='High' status=200
+2026-05-22 13:46:38,320 [INFO] [PASS] task='Schedule one on one with manager' -> priority='Medium' status=200
+2026-05-22 13:46:38,321 [INFO] [PASS] task='Read latest issue of tech magazine' -> priority='Low' status=200
+2026-05-22 13:46:38,322 [INFO] [PASS] task='Patch security vulnerability before audit' -> priority='High' status=200
+2026-05-22 13:46:38,323 [INFO] [PASS] task='Plan team offsite for next quarter' -> priority='Medium' status=200
+2026-05-22 13:46:38,323 [INFO] All 5 tasks passed validation
+
+[STAGE 1 EXIT CODE: 0]
+
+============================================================
+DEMO STAGE 2-3 — Field renamed: priority -> level
+Response key in app.py: "level" (known alias)
+Expected: SCHEMA_DRIFT WARNING, tests still PASS, exit 0
+============================================================
+2026-05-22 13:47:16,436 [INFO] Health OK
+2026-05-22 13:47:16,436 [INFO] Warm-up POST /predict to discover response shape
+2026-05-22 13:47:16,445 [INFO] Live response keys: ['confidence', 'level']
+2026-05-22 13:47:16,445 [WARNING] SCHEMA_DRIFT WARNING: field 'priority' not found, using 'level' instead
+2026-05-22 13:47:16,445 [INFO] Resolved field mapping: {'priority': 'level', 'confidence': 'confidence'}
+2026-05-22 13:47:16,450 [INFO] [PASS] task='Fix login bug breaking production' -> level='High' status=200
+2026-05-22 13:47:16,455 [INFO] [PASS] task='Schedule one on one with manager' -> level='Medium' status=200
+2026-05-22 13:47:16,460 [INFO] [PASS] task='Read latest issue of tech magazine' -> level='Low' status=200
+2026-05-22 13:47:16,463 [INFO] [PASS] task='Patch security vulnerability before audit' -> level='High' status=200
+2026-05-22 13:47:16,469 [INFO] [PASS] task='Plan team offsite for next quarter' -> level='Medium' status=200
+2026-05-22 13:47:16,469 [INFO] All 5 tasks passed validation
+
+[STAGE 2-3 EXIT CODE: 0]
+
+============================================================
+DEMO STAGE 4 — Field renamed: priority -> rank2
+Response key in app.py: "rank2" (NOT a known alias)
+Expected: SCHEMA_BREAK ERROR, exit non-zero
+============================================================
+2026-05-22 13:47:56,771 [INFO] Health OK
+2026-05-22 13:47:56,772 [INFO] Warm-up POST /predict to discover response shape
+2026-05-22 13:47:56,773 [INFO] Live response keys: ['confidence', 'rank2']
+2026-05-22 13:47:56,773 [ERROR] SCHEMA_BREAK ERROR: field 'priority' missing and no known alias found
+
+[STAGE 4 EXIT CODE: 1]
+
+============================================================
+DEMO STAGE 5 — Field restored to: priority
+Response key in app.py: "priority" (original)
+Expected: tests PASS cleanly, no drift, exit 0
+============================================================
+2026-05-22 13:48:31,575 [INFO] Health OK
+2026-05-22 13:48:31,575 [INFO] Warm-up POST /predict to discover response shape
+2026-05-22 13:48:31,577 [INFO] Live response keys: ['confidence', 'priority']
+2026-05-22 13:48:31,577 [INFO] Resolved field mapping: {'priority': 'priority', 'confidence': 'confidence'}
+2026-05-22 13:48:31,579 [INFO] [PASS] task='Fix login bug breaking production' -> priority='High' status=200
+2026-05-22 13:48:31,579 [INFO] [PASS] task='Schedule one on one with manager' -> priority='Medium' status=200
+2026-05-22 13:48:31,580 [INFO] [PASS] task='Read latest issue of tech magazine' -> priority='Low' status=200
+2026-05-22 13:48:31,581 [INFO] [PASS] task='Patch security vulnerability before audit' -> priority='High' status=200
+2026-05-22 13:48:31,583 [INFO] [PASS] task='Plan team offsite for next quarter' -> priority='Medium' status=200
+2026-05-22 13:48:31,583 [INFO] All 5 tasks passed validation
+
+[STAGE 5 EXIT CODE: 0]
+
+################################################################
+# SUMMARY
+#   Stage 1     priority             -> exit 0   PASS
+#   Stage 2-3   level    (alias hit) -> exit 0   PASS with DRIFT WARNING
+#   Stage 4     rank2    (no alias)  -> exit 1   SCHEMA BREAK
+#   Stage 5     priority restored    -> exit 0   PASS
+#
+# Demonstrates: the test tolerates known field renames and recovers
+# with a logged warning, but exits non-zero on genuinely unknown
+# shapes so real breakage still gets caught.
+################################################################

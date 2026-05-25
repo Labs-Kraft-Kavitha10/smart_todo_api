@@ -1,0 +1,202 @@
+task_description,priority
+Fix login bug breaking production,High
+Patch security vulnerability in auth module,High
+Resolve database crash on staging server,High
+Fix payment gateway failure immediately,High
+Critical server downtime needs attention now,High
+Emergency hotfix required for checkout flow,High
+Urgent client deadline today must finish,High
+Submit tax filing before midnight tonight,High
+Fix broken deployment pipeline blocking team,High
+Restore deleted user data ASAP,High
+Resolve memory leak in production service,High
+Fix data corruption issue urgently,High
+Address critical performance regression today,High
+Patch zero day exploit immediately,High
+Restart crashed production worker service,High
+Fix failing CI builds blocking all developers,High
+Resolve customer escalation ticket from CEO,High
+Submit grant proposal before deadline tomorrow,High
+Fix payroll system error before Friday cutoff,High
+Emergency board meeting prep needed tonight,High
+Hotpatch API returning 500 errors in production,High
+Fix data loss bug affecting paying customers,High
+Critical bug in checkout breaking sales now,High
+Resolve outage affecting all enterprise users,High
+Address security audit findings urgently today,High
+Fix authentication failure on mobile app,High
+Patch SQL injection vulnerability discovered,High
+Submit final project deliverable today,High
+Fix broken release pipeline before tomorrow,High
+Address compliance violation immediately,High
+Resolve customer data breach incident now,High
+Fix corrupted database table on prod,High
+Emergency server migration tonight,High
+Fix crash on app launch blocking users,High
+Patch buffer overflow vulnerability in parser,High
+Resolve high severity bug ticket from QA,High
+Fix payment processing failure on weekends,High
+Submit final report by end of day,High
+Restore service from backup urgently,High
+Fix critical UI regression in main user flow,High
+Address production incident happening right now,High
+Fix timezone bug affecting customer billing,High
+Patch broken SSL certificate today before expiry,High
+Resolve infinite loop in background worker,High
+Fix login redirect breaking new customers,High
+Submit visa application before it expires,High
+Fix deadlock in transaction handler urgently,High
+Address pen test findings before audit,High
+Fix mobile app crash on startup blocking launch,High
+Hotfix needed for currency conversion bug,High
+Resolve duplicate charge issue urgently for clients,High
+Fix data export failing for enterprise clients,High
+Emergency rollback of bad deployment to prod,High
+Submit thesis draft before midnight deadline,High
+Fix calendar sync breaking customer meetings,High
+Address legal compliance issue by today,High
+Fix race condition in payment flow ASAP,High
+Patch broken email service immediately,High
+Resolve customer escalation from major account,High
+Fix file upload corrupting client data,High
+Submit conference paper before submission window closes,High
+Resolve PagerDuty alert blocking on call engineer,High
+Fix critical typo on landing page before launch,High
+Address blocker for tomorrow scheduled release,High
+Fix broken search returning no results in production,High
+Hotfix for analytics dashboard completely down,High
+Resolve OAuth flow failing for all SSO users,High
+Fix Stripe webhook handler crashing on every event,High
+Patch critical CVE in dependency urgently,High
+Submit annual performance review before Friday,High
+Prepare slides for team meeting next week,Medium
+Schedule one on one with manager,Medium
+Review quarterly planning document,Medium
+Update project timeline in spreadsheet,Medium
+Organise sprint planning session for next sprint,Medium
+Send weekly status update email to team,Medium
+Book conference room for design workshop,Medium
+Plan team offsite for next quarter,Medium
+Review pull requests from teammates,Medium
+Update employee handbook section on PTO,Medium
+Coordinate with vendor on annual contract,Medium
+Plan onboarding for new hire starting Monday,Medium
+Schedule design review meeting with stakeholders,Medium
+Draft project roadmap for Q3 planning,Medium
+Review budget proposals for next fiscal year,Medium
+Conduct interview with candidate for backend role,Medium
+Prepare agenda for stakeholder meeting,Medium
+Submit timesheet for this week,Medium
+Update OKRs in tracking system,Medium
+Review marketing campaign draft from agency,Medium
+Plan team building activity for next month,Medium
+Send invoice to client for last engagement,Medium
+Process expense reports from last trip,Medium
+Schedule dentist appointment for checkup,Medium
+Plan family vacation dates for summer,Medium
+Renew car insurance policy before renewal,Medium
+Update LinkedIn profile with new role,Medium
+Review insurance documents from broker,Medium
+Send birthday card to coworker,Medium
+Schedule annual physical exam with doctor,Medium
+Update emergency contact info at work,Medium
+File quarterly tax forms for business,Medium
+Reconcile bank statements from last month,Medium
+Plan grocery shopping list for the week,Medium
+Schedule house cleaning service for next Saturday,Medium
+Submit reimbursement request for conference,Medium
+Review meeting notes from yesterday standup,Medium
+Organize team retrospective for end of sprint,Medium
+Plan demo for stakeholders next week,Medium
+Update Jira tickets with current status,Medium
+Send follow up email to potential client,Medium
+Schedule annual performance review with reports,Medium
+Prepare quarterly business review presentation,Medium
+Plan migration testing strategy with team,Medium
+Review architecture proposal document from architect,Medium
+Conduct code review session for junior dev,Medium
+Update wiki documentation for new feature,Medium
+Plan team training session on new framework,Medium
+Coordinate release notes with product manager,Medium
+Schedule UX research interviews for new feature,Medium
+Review legal documents from vendor contract,Medium
+Plan content calendar for next month posts,Medium
+File annual tax return before April,Medium
+Renew passport before next international trip,Medium
+Schedule pet vet appointment for vaccinations,Medium
+Plan birthday party for kid next weekend,Medium
+Send thank you note to mentor for advice,Medium
+Schedule haircut appointment for next week,Medium
+Review home insurance renewal options,Medium
+Plan weekend errands list with spouse,Medium
+Update household budget tracker spreadsheet,Medium
+Schedule plumber for kitchen sink repair,Medium
+Plan office relocation logistics with admin,Medium
+Review supplier proposals for office supplies,Medium
+Coordinate holiday party planning committee,Medium
+Update emergency response plan documentation,Medium
+Schedule fire safety inspection for office,Medium
+Plan internal hackathon event for engineering,Medium
+Review IT procurement requests from team,Medium
+Submit quarterly compliance report to legal,Medium
+Plan monthly book club discussion,Medium
+Read latest issue of tech magazine,Low
+Watch new episode of favourite series tonight,Low
+Browse vacation destinations online for fun,Low
+Listen to podcast on long commute,Low
+Read fiction book before bed,Low
+Watch documentary about deep space exploration,Low
+Browse new restaurants in the neighbourhood,Low
+Read article about machine learning trends,Low
+Watch cooking video on YouTube for new recipe,Low
+Browse online clothing store seasonal sale,Low
+Read book chapter on ancient history,Low
+Watch movie with family at home tonight,Low
+Browse art gallery website for inspiration,Low
+Listen to relaxing music playlist after work,Low
+Read travel blog for vacation inspiration,Low
+Watch standup comedy special on Netflix,Low
+Browse furniture catalogue online for ideas,Low
+Read old comic book collection from childhood,Low
+Watch nature documentary tonight before sleep,Low
+Browse photography portfolios for inspiration,Low
+Read inspirational quotes online before work,Low
+Watch funny cat videos to relax,Low
+Browse social media feeds aimlessly,Low
+Read product reviews before buying gadget,Low
+Watch sports highlights from yesterday game,Low
+Browse recipe website for dinner ideas,Low
+Read memoir from favourite author,Low
+Watch live concert stream on the weekend,Low
+Browse new game releases on Steam,Low
+Read science fiction novel before sleeping,Low
+Watch travel vlog about Japan trip,Low
+Browse outdoor gear catalog online,Low
+Read history of ancient Rome book,Low
+Watch trailer for upcoming Marvel movie,Low
+Browse stamp collecting forums for tips,Low
+Read short stories collection on Sunday,Low
+Watch wildlife documentary on streaming service,Low
+Browse online museum exhibits virtually,Low
+Read poetry anthology in the evening,Low
+Watch hobby tutorial video for new craft,Low
+Browse classic car website for fun,Low
+Read graphic novel before sleep tonight,Low
+Watch DIY home project video for ideas,Low
+Browse coffee shop reviews online for weekend,Low
+Read newspaper Sunday edition over coffee,Low
+Watch chess tournament highlights online,Low
+Browse local hiking trail websites for weekend,Low
+Read book club selection slowly this week,Low
+Watch animated short films on YouTube,Low
+Browse craft project ideas for the kids,Low
+Read self help book chapter before bed,Low
+Watch educational video about quantum physics,Low
+Browse vintage record collections online,Low
+Read weekly horoscope for fun,Low
+Watch live stream of nature cam,Low
+Browse fan theories online about new movie,Low
+Read mystery novel for entertainment,Low
+Watch makeup tutorial video casually,Low
+Browse plant care websites for new houseplant,Low
+Read fantasy book series next chapter,Low

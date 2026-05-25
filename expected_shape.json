@@ -1,0 +1,4 @@
+{
+  "required_fields": ["priority", "confidence"],
+  "priority_values": ["High", "Medium", "Low"]
+}
